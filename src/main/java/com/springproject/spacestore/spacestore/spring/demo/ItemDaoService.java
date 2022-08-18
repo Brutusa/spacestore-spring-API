@@ -4,10 +4,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ItemDaoService {
+
+    //Create an array to store space items
     private static List<SpaceStoreItem> allItems = new ArrayList<>();
 
     private static int itemCount = allItems.size();
 
+    //Create items to add to allItems array
     static {
         allItems.add(new SpaceStoreItem("Martian Mangos", "mars", 500));
         allItems.add(new SpaceStoreItem("Jupiter Jackfruit", "jupiter", 900));
@@ -15,10 +18,16 @@ public class ItemDaoService {
         allItems.add(new SpaceStoreItem("Pluto Pears", "pluto", 5000));
     }
 
+    //Method to return all items in array to be displayed
     public List<SpaceStoreItem> displayAll() {
         return allItems;
     }
 
+    public static int getItemCount() {
+        return itemCount;
+    }
+
+    //Add an item to the array
     public SpaceStoreItem addItem (SpaceStoreItem newItem){
         if (SpaceStoreItem.getItemCode() == 0){
                 SpaceStoreItem.setItemCode();
@@ -27,6 +36,7 @@ public class ItemDaoService {
         return  newItem;
     }
 
+    //Method to look through array of items to return single item
     public SpaceStoreItem findItemSource(String itemSource){
         for (SpaceStoreItem item: allItems){
             if (item.getItemSource().equals(itemSource)){
