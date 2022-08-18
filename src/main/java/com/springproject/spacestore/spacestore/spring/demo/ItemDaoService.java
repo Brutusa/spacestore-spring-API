@@ -12,6 +12,7 @@ public class ItemDaoService {
         allItems.add(new SpaceStoreItem("Martian Mangos", "mars", 500));
         allItems.add(new SpaceStoreItem("Jupiter Jackfruit", "jupiter", 900));
         allItems.add(new SpaceStoreItem("Venus Vanilla Extract", "venus", 1200));
+        allItems.add(new SpaceStoreItem("Pluto Pears", "pluto", 5000));
     }
 
     public List<SpaceStoreItem> displayAll() {
