@@ -1,5 +1,5 @@
 # spacestore-spring-demo
-A Spring Program demo for displaying information for products from space by Andujar Brutus
+A Spring program demo for displaying information for products from space by Andujar Brutus
 #
 Tested with Postman
 
