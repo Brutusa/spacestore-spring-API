@@ -3,14 +3,15 @@ package com.springproject.spacestore.spacestore.spring.demo;
 public class SpaceStoreItem {
     private String name;
     private String itemSource;
-    private static Integer itemCode = 0;
+    private static int itemCode;
+    private int uniqueItemCode;
     private int itemPrice;
 
     public SpaceStoreItem(String name, String itemSource, int itemPrice) {
         this.name = name;
         this.itemSource = itemSource;
         this.itemPrice = itemPrice;
-        itemCode = ++itemCode;
+        this.uniqueItemCode = ++itemCode;
     }
 
     public String getName() {
@@ -29,12 +30,12 @@ public class SpaceStoreItem {
         this.itemSource = itemSource;
     }
 
-    public static int getItemCode() {
-        return itemCode;
+    public int getItemCode() {
+        return uniqueItemCode;
     }
 
-    public static void setItemCode() {
-        itemCode = ++itemCode;
+    public void setItemCode() {
+        uniqueItemCode = ++itemCode;
     }
 
     public int getItemPrice() {

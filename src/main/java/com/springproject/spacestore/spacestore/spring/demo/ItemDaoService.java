@@ -8,8 +8,6 @@ public class ItemDaoService {
     //Create an array to store space items
     private static List<SpaceStoreItem> allItems = new ArrayList<>();
 
-    private static int itemCount = allItems.size();
-
     //Create items to add to allItems array
     static {
         allItems.add(new SpaceStoreItem("Martian Mangos", "mars", 500));
@@ -23,14 +21,15 @@ public class ItemDaoService {
         return allItems;
     }
 
-    public static int getItemCount() {
-        return itemCount;
+    //Retrieve item count
+    public int getItemCount() {
+        return allItems.size();
     }
 
     //Add an item to the array
     public SpaceStoreItem addItem (SpaceStoreItem newItem){
-        if (SpaceStoreItem.getItemCode() == 0){
-                SpaceStoreItem.setItemCode();
+        if (newItem.getItemCode() == 0){
+                newItem.setItemCode();
         }
         allItems.add(newItem);
         return  newItem;
