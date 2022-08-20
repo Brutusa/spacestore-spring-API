@@ -41,4 +41,11 @@ public class SpaceStoreItemController {
         return ResponseEntity.created(location).build();
     }
 
+    @DeleteMapping("/items/{itemCode}")
+    public void deleteByCode(@PathVariable int itemCode){
+        SpaceStoreItem item = service.removeItemByCode(itemCode);
+
+        //Add in exception for if code does not exist
+    }
+
 }

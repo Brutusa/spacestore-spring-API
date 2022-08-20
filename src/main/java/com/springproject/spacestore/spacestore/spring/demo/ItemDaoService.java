@@ -45,4 +45,16 @@ public class ItemDaoService {
         return null;
     }
 
+    public SpaceStoreItem removeItemByCode(int itemCode){
+        Iterator<SpaceStoreItem> iterator = allItems.iterator();
+            while (iterator.hasNext()){
+                SpaceStoreItem item = iterator.next();
+                if (item.getItemCode() == itemCode){
+                    iterator.remove();
+                    return item;
+                }
+            }
+        return null;
+    }
+
 }
