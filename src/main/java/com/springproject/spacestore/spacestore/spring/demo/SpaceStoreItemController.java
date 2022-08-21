@@ -45,7 +45,7 @@ public class SpaceStoreItemController {
     public void deleteByCode(@PathVariable int itemCode){
         SpaceStoreItem item = service.removeItemByCode(itemCode);
 
-        //Add in exception for if code does not exist
+        //Add in exception for if itemcode does not exist
     }
 
 }
