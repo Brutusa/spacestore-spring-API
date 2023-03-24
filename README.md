@@ -1,4 +1,4 @@
-# spacestore-spring-demo
+# spacestore-spring-API
 A Spring demo program for displaying information for products from space by Andujar Brutus
 #
 Tested with Postman
